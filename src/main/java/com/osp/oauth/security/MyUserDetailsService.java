@@ -11,8 +11,10 @@ import org.springframework.stereotype.Service;
 
 import com.osp.oauth.model.SystemUser;
 import com.osp.oauth.model.UserRole;
-import com.osp.oauth.service.SystemUserServiceImpl;
-import com.osp.oauth.service.UserRoleServiceImpl;
+import com.osp.oauth.service.SystemUserService;
+import com.osp.oauth.service.UserRoleService;
+import com.osp.oauth.service.impl.SystemUserServiceImpl;
+import com.osp.oauth.service.impl.UserRoleServiceImpl;
 
 
 @Service("MyUserDetailsImpl")
@@ -20,10 +22,10 @@ public class MyUserDetailsService implements UserDetailsService {
 	
     
 	@Resource(name = "SystemUserServiceImpl")
-    private SystemUserServiceImpl systemUserService;
+    private SystemUserService systemUserService;
 
     @Resource(name = "UserRoleServiceImpl")
-    private UserRoleServiceImpl userRoleService;
+    private UserRoleService userRoleService;
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {

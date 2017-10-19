@@ -1,4 +1,4 @@
-package com.osp.oauth.service;
+package com.osp.oauth.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.osp.oauth.model.SystemUser;
+import com.osp.oauth.service.SystemUserService;
 
 /**
  * 模拟获取用户
@@ -13,7 +14,7 @@ import com.osp.oauth.model.SystemUser;
  *
  */
 @Service("SystemUserServiceImpl")
-public class SystemUserServiceImpl {
+public class SystemUserServiceImpl implements SystemUserService{
 
 	public SystemUserServiceImpl() {
 		SystemUser user1 = new SystemUser();

@@ -12,6 +12,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
+/**
+ * 自定义验证
+ * @author fly
+ *
+ */
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 

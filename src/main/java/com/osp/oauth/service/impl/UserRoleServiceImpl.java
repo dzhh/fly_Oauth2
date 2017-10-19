@@ -1,4 +1,4 @@
-package com.osp.oauth.service;
+package com.osp.oauth.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.osp.oauth.model.SystemUser;
 import com.osp.oauth.model.UserRole;
+import com.osp.oauth.service.UserRoleService;
 
 /**
  * 模拟用户的角色
@@ -16,7 +17,7 @@ import com.osp.oauth.model.UserRole;
  *
  */
 @Service("UserRoleServiceImpl")
-public class UserRoleServiceImpl {
+public class UserRoleServiceImpl implements UserRoleService {
 
 	public UserRoleServiceImpl() {
 		UserRole role1 = new UserRole();

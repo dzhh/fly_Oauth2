@@ -73,6 +73,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .withUser("admin").password("admin").roles("USER");
 //    }
 	
+    /**
+     * 自定义验证
+     * @return
+     */
     @Bean
     CustomAuthenticationProvider customAuthenticationProvider() {
         return new CustomAuthenticationProvider();
@@ -82,7 +86,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * 自定义用户服务
      */
     @Autowired
-    private UserDetailsService userDetailsService;
+    private MyUserDetailsService userDetailsService;
     
 	/**
 	 * 类似于一个匿名内部类，它的作用域局限于一个WebSecurityConfigurerAdapter内部
